@@ -4,7 +4,7 @@ import React from 'react'
 const Onboarding = ({navigation}) => {
   return (
     <View>
-      <Text>Onboarding</Text>
+      <Text>Onboarding screens will add a onboarding library here </Text>
     </View>
   )
 }
