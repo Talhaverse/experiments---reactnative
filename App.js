@@ -16,7 +16,7 @@ export default function App() {
     <NavigationContainer>
 
 <Stack.Navigator initialRouteName='Landing' >
-  
+
         <Stack.Screen name="Landing" component={Landing}   options={{ title: "Landing" }} />
         <Stack.Screen name="Onboarding" component={Onboarding}   options={{ title: "Onboarding" }} />
 
