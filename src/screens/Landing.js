@@ -6,7 +6,8 @@ export default function Landing({navigation}) {
     <SafeAreaView>
         
       <Text>landing page gdsc uok </Text>
-      <Button onPress={() => navigation.navigate('Onboarding')} title="go to onboardingggg" />
+      <Text>landing page gdsc uok </Text>
+
 
     </SafeAreaView>
   )
