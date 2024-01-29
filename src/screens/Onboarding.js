@@ -7,6 +7,9 @@ const Onboarding = ({navigation}) => {
       <Text>Onboarding screens will add a onboarding library here ... test </Text>
       <Text>Onboarding screens will add a onboarding library here ... test </Text>
       <Text>Onboarding screens will add a onboarding library here ... test </Text>
+      <Text>Onboarding screens will add a onboarding library here ... test </Text>
+      <Button title="Onboarding screens" />
+
       <Button onPress={() => navigation.navigate('Landing')} title="go to landing" />
 
 
