@@ -1,20 +1,40 @@
-import { View, Text,Button } from 'react-native'
+import { View,StyleSheet,SafeAreaView } from 'react-native'
 import React from 'react'
+import { Animated } from 'react-native'
+import data from '../../Data/Data'
+import RenderItem from '../../Components/RenderItem'
 
-const Onboarding = ({navigation}) => {
+
+const Onboarding = () => {
   return (
-    <View>
-      <Text>Onboarding screens will add a onboarding library here ... test </Text>
-      <Text>Onboarding screens will add a onboarding library here ... test </Text>
-      <Text>Onboarding screens will add a onboarding library here ... test </Text>
-      <Text>Onboarding screens will add a onboarding library here ... test </Text>
-      <Button title="Onboarding screens" />
+    <SafeAreaView style={styles.container}>
+     
 
-      <Button onPress={() => navigation.navigate('Landing')} title="go to landing" />
+<Animated.Flatlist
+ data={data} 
+ renderItem={({item,index}) => {
+  return <RenderItem />
+}}
+keyExtractor={item => item.id}
+scrollEventThrottle={16}
+horizontal={true}
+bounces={false}
+pagingEnabled={true}
+showsHorizontalScrollIndicator={false}
 
 
-    </View>
+/>
+
+    </SafeAreaView>
   )
 }
 
+
 export default Onboarding
+
+const styles = StyleSheet.create ({
+container: {
+  flex: 1,
+},
+
+})

@@ -6,10 +6,7 @@ export default function Landing({navigation}) {
     <SafeAreaView>
         
       <Text>landing page gdsc uok </Text>
-      <Text>landing page gdsc uok </Text>
-      <Text>landing page gdsc uok </Text>
-      <Text>landing page gdsc uok </Text>
-
+      
 
 
 
