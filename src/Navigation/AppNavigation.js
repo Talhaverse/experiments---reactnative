@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Landing from '../screens/Landing';
 import AppOnboarding from '../screens/Onboarding';
+import SignIn from '../screens/SignIn';
+import SignUp from '../screens/SignUp';
 
 
 
@@ -14,15 +16,16 @@ const Stack = createNativeStackNavigator();
 export default function AppNavigation() {
   return (
     <NavigationContainer>
-
-<Stack.Navigator initialRouteName='Onboarding' >
-
-        <Stack.Screen name="AppOnboarding" component={AppOnboarding}   options={{headerShown:false}} />
-        <Stack.Screen name="Landing" component={Landing}   options={{ headerShown:false}}  />
-
-      </Stack.Navigator>
-
+        <Stack.Navigator initialRouteName='Onboarding' >
+          <Stack.Screen name="AppOnboarding" component={AppOnboarding}   options={{headerShown:false}} />
+          <Stack.Screen name="Landing" component={Landing}   options={{ headerShown:false}}  />
+          <Stack.Screen name="SignIn" component={SignIn}   options={{ headerShown:true}}  />
+          <Stack.Screen name="SignUp" component={SignUp}   options={{ headerShown:true}}  />
+        </Stack.Navigator>
     </NavigationContainer>
-  );
-}
+        
+          );
+        }
+
+
 
