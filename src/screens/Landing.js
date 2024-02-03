@@ -46,7 +46,7 @@ const Landing = () => {
         </TouchableOpacity>
 
         <TouchableOpacity
-          style={[styles.button, { backgroundColor: "#2541b2" }]}
+          style={[styles.button, { backgroundColor: "#0197f6" }]}
           onPress={() => navigation.navigate("SignUp")}
         >
           <Text style={styles.buttonText}>Sign Up</Text>
@@ -76,17 +76,19 @@ const styles = StyleSheet.create({
   },
 
   button: {
-    backgroundColor: "#03256c",
-    padding: 10,
-    borderRadius: 50,
-    width: 300,
+    backgroundColor: "#006daa",
     marginBottom: 10,
+    borderRadius: 10,
+    padding: 15,
+    width: '90%',
+    alignItems: 'center',
   },
 
   buttonText: {
     color: "white",
     textAlign: "center",
     fontSize: 18,
+    fontWeight: 'bold',
   },
 });
 
