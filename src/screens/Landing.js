@@ -1,15 +1,15 @@
-import { View, Text,SafeAreaView,ImageBackground,StyleSheet,TouchableOpacity } from 'react-native'
+import { View, Text,SafeAreaView,ImageBackground,StyleSheet,TouchableOpacity,Image } from 'react-native'
 import React from 'react'
 
 const Landing = () => {
   return (
     <View style={styles.container}>
-      {/* <Image
-        source={require('./path-to-your-image.jpg')}
+      <Image
+        source={require('../../assets/face.jpeg')}
         style={styles.logo}
         resizeMode="contain"
-      /> */}
-      <Text style={styles.title}>Welcome to Your App</Text>
+      />
+      <Text style={styles.title}>Welcome to RN Experiments</Text>
       
       <TouchableOpacity style={styles.button} onPress={() => console.log('Login pressed')}>
         <Text style={styles.buttonText}>Login</Text>
