@@ -49,7 +49,7 @@ const Landing = () => {
           style={[styles.button, { backgroundColor: "#2541b2" }]}
           onPress={() => navigation.navigate("SignUp")}
         >
-          <Text style={styles.buttonText}>Signup</Text>
+          <Text style={styles.buttonText}>Sign Up</Text>
         </TouchableOpacity>
       </View>
     </ImageBackground>
