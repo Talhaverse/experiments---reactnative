@@ -1,15 +1,20 @@
-import { View, Text,Button,SafeAreaView } from 'react-native'
-import React from 'react'
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
+import React from "react";
 
-export default function Landing({navigation}) {
+const Landing = () => {
   return (
-    <SafeAreaView>
-        
-      <Text>landing page gdsc uok </Text>
-      
-
-
-
+    <SafeAreaView style={styles.container}>
+      <Text>Llkdfsjghkefghiuerghfjk</Text>
     </SafeAreaView>
-  )
-}
+  );
+};
+
+export default Landing;
+
+const styles = StyleSheet.create({
+
+container: {
+  flex:1
+},
+
+})
