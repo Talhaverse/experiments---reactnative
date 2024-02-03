@@ -1,4 +1,4 @@
-import { View,StyleSheet,SafeAreaView,Text,Dimensions } from 'react-native'
+import { View,StyleSheet,SafeAreaView,Text,Dimensions,Platform } from 'react-native'
 import React from 'react'
 import Onboarding from 'react-native-onboarding-swiper';
 import LottieView from 'lottie-react-native';
@@ -69,7 +69,8 @@ export default AppOnboarding
 const styles = StyleSheet.create ({
 container: {
   flex: 1,
-  backgroundColor: 'white'
+  backgroundColor: 'white',
+
 },
 
 lottie: {

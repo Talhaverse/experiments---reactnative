@@ -1,4 +1,4 @@
-import { View, Text,StyleSheet,Dimensions,SafeAreaView } from 'react-native'
+import { View, Text,StyleSheet,Dimensions,SafeAreaView,Platform } from 'react-native'
 import React from 'react'
 import LottieView from 'lottie-react-native';
 import tw from 'twrnc'
