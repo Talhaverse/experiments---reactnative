@@ -1,20 +1,23 @@
-import { View, Text, SafeAreaView, StyleSheet } from "react-native";
-import React from "react";
+import { View, Text,StyleSheet,Dimensions,SafeAreaView } from 'react-native'
+import React from 'react'
+import LottieView from 'lottie-react-native';
+import tw from 'twrnc'
 
-const Landing = () => {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text>Llkdfsjghkefghiuerghfjk</Text>
+
+const {width,height} = Dimensions.get('window');
+
+
+export default function Landing() {
+  return(
+    <SafeAreaView>
+
     </SafeAreaView>
-  );
-};
+  )
+}
 
-export default Landing;
-
-const styles = StyleSheet.create({
-
-container: {
-  flex:1
-},
-
+style = StyleSheet.create({
+  container: {
+    flex:1,
+    alignItems: 'center'
+  }
 })
