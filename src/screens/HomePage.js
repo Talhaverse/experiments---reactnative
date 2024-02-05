@@ -1,11 +1,18 @@
-import { View, Text } from 'react-native'
+import { View, Text,Button,SafeAreaView } from 'react-native'
 import React from 'react'
+import { useNavigation } from "@react-navigation/native";
+
 
 const HomePage = () => {
+
+  const navigation = useNavigation();
+
+
   return (
-    <View>
+    <SafeAreaView>
       <Text>HomePage</Text>
-    </View>
+      <Button  onPress={{}} title="logout" />
+    </SafeAreaView>
   )
 }
 

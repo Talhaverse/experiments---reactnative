@@ -16,7 +16,7 @@ const SignUp = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [confirmPassword, setConfirmPassword] = useState("");
 
 
   const handleSignUp = () => {
@@ -62,13 +62,13 @@ const SignUp = () => {
               onChangeText={(text) => setPassword(text)}
             />
 
-            <TextInput
+            {/* <TextInput
               style={styles.input}
               placeholder="Confirm Password"
               secureTextEntry
               value={confirmPassword}
               onChangeText={(text) => setConfirmPassword(text)}
-            />
+            /> */}
 
 
             <TouchableOpacity
