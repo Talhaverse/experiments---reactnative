@@ -1,11 +1,23 @@
-import { View, Text } from 'react-native'
+import { View, Text,Button,SafeAreaView } from 'react-native'
 import React from 'react'
+import { useNavigation } from "@react-navigation/native";
+import { auth } from '../../config/firebase';
+import {signOut} from 'firebase/auth'
+
 
 const HomePage = () => {
+
+  const navigation = useNavigation();
+
+const handleLogout = async ()=> {
+  await signOut(auth);
+}
+
   return (
-    <View>
+    <SafeAreaView>
       <Text>HomePage</Text>
-    </View>
+      <Button  onPress={handleLogout} title="logout" />
+    </SafeAreaView>
   )
 }
 
