@@ -11,6 +11,8 @@ import tw from "twrnc";
 import { useNavigation } from "@react-navigation/native";
 import LottieView from "lottie-react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import {createUserWithEmailAndPassword}from 'firebase/auth'
+import { auth } from "../../config/firebase";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -19,10 +21,24 @@ const SignUp = () => {
   // const [confirmPassword, setConfirmPassword] = useState("");
 
 
-  const handleSignUp = () => {
+  const handleSignUp = async () => {
     // Add your sign-up logic here
+
+    if(email && password) {
+      try {
+
+        await createUserWithEmailAndPassword(auth,email,password); 
+
+        
+      } catch (error) {
+        console.log("got error: ",error.message)
+      }
+    }
+
     console.log("Signing up with:", name, email, password);
   };
+
+  const navigation = useNavigation();
 
   return (
     <View style={{ flex: 1 }}>

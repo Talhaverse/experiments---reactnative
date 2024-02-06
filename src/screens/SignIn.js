@@ -11,13 +11,24 @@ import tw from "twrnc";
 import { useNavigation } from "@react-navigation/native";
 import LottieView from "lottie-react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { auth } from "../../config/firebase";
+import {signInWithEmailAndPassword} from 'firebase/auth'
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignIn = () => {
+  const handleSignIn = async() => {
     // Add your sign-in logic here
+
+    if(email && password) {
+      try {
+        await signInWithEmailAndPassword(auth,email,password)
+      } catch (error) {
+        console.log("got error: " , error.message)
+      }
+    }
+
     console.log("Signing in with:", email, password);
   };
 
