@@ -15,7 +15,7 @@ const handleLogout = async ()=> {
 
   return (
     <SafeAreaView>
-      <Text></Text>
+      <Text>  we will think of what can we do here  </Text>
       <Button  onPress={handleLogout} title="logout" />
     </SafeAreaView>
   )
