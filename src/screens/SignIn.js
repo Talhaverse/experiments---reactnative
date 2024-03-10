@@ -6,6 +6,7 @@ import {
   Text,
   StyleSheet,
   ImageBackground,
+  ActivityIndicator
 } from "react-native";
 import tw from "twrnc";
 import { useNavigation } from "@react-navigation/native";
@@ -17,19 +18,24 @@ import {signInWithEmailAndPassword} from 'firebase/auth'
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error,setError] = useState(null)
+  const [loading,setLoading] = useState(false)
+
 
   const handleSignIn = async() => {
     // Add your sign-in logic here
-
+setLoading(true)
     if(email && password) {
       try {
         await signInWithEmailAndPassword(auth,email,password)
       } catch (error) {
+        setError(error.message)
         console.log("got error: " , error.message)
       }
     }
 
     console.log("Signing in with:", email, password);
+    setLoading(false)
   };
 
   const navigation = useNavigation();
@@ -55,20 +61,25 @@ const SignIn = () => {
               autoCapitalize="none"
               value={email}
               onChangeText={(text) => setEmail(text)}
-            />
+              />
+            {
+              
+            }
             <TextInput
               style={styles.input}
               placeholder="Password"
               secureTextEntry
               value={password}
               onChangeText={(text) => setPassword(text)}
-            />
+              />
+              {error && <Text style={{color:'red',paddingBottom:20}}>{error}</Text>}
             <TouchableOpacity
               style={styles.signInButton}
               onPress={handleSignIn}
             >
               <Text style={styles.buttonText}>Sign In</Text>
             </TouchableOpacity>
+            {loading && <ActivityIndicator style={{marginTop:15}} size="large" color="blue"/>}
           </View>
         </KeyboardAwareScrollView>
       </ImageBackground>
