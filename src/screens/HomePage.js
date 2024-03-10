@@ -15,7 +15,7 @@ const handleLogout = async ()=> {
 
   return (
     <SafeAreaView>
-      <Text>Here i will implement gorhoms app view component and then new features will be shown</Text>
+      <Text></Text>
       <Button  onPress={handleLogout} title="logout" />
     </SafeAreaView>
   )
