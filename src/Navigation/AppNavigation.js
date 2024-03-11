@@ -3,6 +3,8 @@ import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React,{useState} from 'react'
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 
 
 import Landing from "../screens/Landing";
@@ -14,12 +16,11 @@ import useAuth from "../Hooks/useAuth";
 
 const Stack = createNativeStackNavigator();
 
-export default function AppNavigation() {
+export default function AppNavigation () {
 
 
 
   const { user } = useAuth();
-  
   if (user) {
     return (
       <NavigationContainer>
