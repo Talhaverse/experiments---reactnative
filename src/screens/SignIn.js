@@ -14,6 +14,9 @@ import LottieView from "lottie-react-native";
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { auth } from "../../config/firebase";
 import {signInWithEmailAndPassword} from 'firebase/auth'
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
+
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -37,6 +40,8 @@ setLoading(true)
     console.log("Signing in with:", email, password);
     setLoading(false)
   };
+
+
 
   const navigation = useNavigation();
   return (

@@ -2,6 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import React,{useState} from 'react'
+
 
 import Landing from "../screens/Landing";
 import AppOnboarding from "../screens/Onboarding";
@@ -13,7 +15,11 @@ import useAuth from "../Hooks/useAuth";
 const Stack = createNativeStackNavigator();
 
 export default function AppNavigation() {
+
+
+
   const { user } = useAuth();
+  
   if (user) {
     return (
       <NavigationContainer>
