@@ -3,13 +3,16 @@ import React from 'react'
 import { useNavigation } from "@react-navigation/native";
 import { auth } from '../../config/firebase';
 import {signOut} from 'firebase/auth'
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 
 
 const HomePage = () => {
-
+  
   const navigation = useNavigation();
-
-const handleLogout = async ()=> {
+  
+  const handleLogout = async ()=> {
+  
   await signOut(auth);
 }
 
