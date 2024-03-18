@@ -36,7 +36,8 @@ const Landing = () => {
           source={require("../../assets/animations/Animation4.json")}
           autoPlay
           loop
-          style={{ height: 290, width: 300, marginBottom: 150 }}
+          style={{ justifyContent: 'center',
+          alignItems: 'center',height:200,width:400,marginBottom:250 }}
         />
         <TouchableOpacity
           style={styles.button}

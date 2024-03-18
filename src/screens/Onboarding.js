@@ -75,11 +75,8 @@ container: {
 
 lottie: {
 
-  // flex: 1,
   justifyContent: 'center',
   alignItems: 'center',
-  width: width * 0.9,
-  height:width
   
 }
 
