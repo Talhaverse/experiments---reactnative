@@ -21,6 +21,7 @@ export default function AppNavigation () {
 
 
   const { user } = useAuth();
+
   if (user) {
     return (
       <NavigationContainer>
