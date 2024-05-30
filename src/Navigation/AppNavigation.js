@@ -1,9 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import { StyleSheet, Text, View, SafeAreaView,Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React,{useState} from 'react'
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import {signOut} from 'firebase/auth'
 
 
 
@@ -13,6 +14,8 @@ import SignIn from "../screens/SignIn";
 import SignUp from "../screens/SignUp";
 import HomePage from "../screens/HomePage";
 import useAuth from "../Hooks/useAuth";
+import { auth } from '../../config/firebase';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +24,10 @@ export default function AppNavigation () {
 
 
   const { user } = useAuth();
+  const handleLogout = async ()=> {
+  
+    await signOut(auth);
+  }
 
   if (user) {
     return (
@@ -29,7 +36,11 @@ export default function AppNavigation () {
           <Stack.Screen
             name="HomePage"
             component={HomePage}
-            options={{ headerShown: true }}
+            options={{ headerShown: true,headerRight:() => (
+              <Button onPress={handleLogout} title="logout" />
+
+            ),}}
+            
           />
         </Stack.Navigator>
       </NavigationContainer>

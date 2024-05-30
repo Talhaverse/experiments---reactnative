@@ -32,13 +32,7 @@ const Landing = () => {
             </Text>
           </Text>
         </View>
-        {/* <LottieView
-          source={require("../../assets/animations/Animation4.json")}
-          autoPlay
-          loop
-          style={{ justifyContent: 'center',
-          alignItems: 'center',height:200,width:400,marginBottom:250 }}
-        /> */}
+        
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate("SignIn")}

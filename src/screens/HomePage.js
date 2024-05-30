@@ -18,7 +18,7 @@ const HomePage = () => {
 
   return (
     <SafeAreaView>
-      <Text>  we will think of what coming here agian now </Text>
+      <Text>  we will think of what coming here again now </Text>
       <Button  onPress={handleLogout} title="logout" />
     </SafeAreaView>
   )
